@@ -1,0 +1,4 @@
+ansible-express-react-server-side-01 connection=docker
+
+[group1]
+ansible-express-react-server-side-01

@@ -1,0 +1,8 @@
+---
+
+vault_git_repo: git@github.com:YPCrumble/server-rendered-react-app.git
+
+# You can use the following Python script to adjust this value.
+# pip install passlib
+# python -c "from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.encrypt(getpass.getpass())"
+vault_sudo_user_password: "$6$rounds=656000$BwutbncOD7MKMub/$hUJLBDj77Z9rhuypzpC2K/5oofWYjyLWCXiUc8qcJBi3exttAdnaA.f0TGzUMF0HhNqNFYNridBdD/egM.oX11"

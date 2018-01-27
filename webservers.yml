@@ -1,0 +1,14 @@
+---
+
+- name: Provision a {{ application_name }} web server
+  hosts: webservers
+  become: yes
+  become_user: root
+  remote_user: "{{ server_user }}"
+  vars:
+    update_apt_cache: yes
+  roles:
+    - base
+    - certbot
+    - web
+    - nginx

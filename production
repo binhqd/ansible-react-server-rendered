@@ -1,0 +1,5 @@
+[webservers]
+example.com nginx_use_letsencrypt=true
+
+[production:children]
+webservers

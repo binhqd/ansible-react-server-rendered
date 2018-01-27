@@ -1,0 +1,18 @@
+---
+
+project_name: example
+application_name: "{{ project_name }}"
+
+
+# Git settings.
+git_repo: "{{ vault_git_repo }}"
+setup_git_repo: yes
+git_branch: master
+
+
+# Security settings
+sudo_user_password: "{{ vault_sudo_user_password }}"
+
+
+# Nginx settings
+nginx_cache_static: yes
