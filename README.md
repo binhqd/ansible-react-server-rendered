@@ -64,8 +64,8 @@ ansible-playbook -i production security.yml
 
 **NOTE:** to enable the Security module you can use the steps above prior to following the steps below.
 
-Create an inventory file for the environment, for example:
-
+### Create an inventory file for the environment
+For example:
 ```
 # production
 
@@ -75,6 +75,30 @@ example.com nginx_use_letsencrypt=true
 [production:children]
 webservers
 ```
+
+### Setup SSH Agent forwarding
+
+1. Make sure ssh-agent is running on your local machine (run `ssh-agent` from the command line)
+1. Test that your ssh key is ready for forwarding via `ssh-add -L`; if not, add your key (`ssh-add yourkey`)
+1. Create an entry in your local .ssh/config file:
+```
+Host example.com
+    User example # Make sure to set this to your application user.
+    IdentityFile ~/.ssh/id_rsa
+    ForwardAgent Yes
+    IdentitiesOnly yes
+```
+1. Make sure you're using the SSH connection to your repo (not the HTTPS connection)
+1. Ensure that your domain (e.g., `example.com`) points to your server's IP address
+1. Refer to the [Github tutorial](https://developer.github.com/guides/using-ssh-agent-forwarding/) for help debugging SSH agent forwarding
+
+### Setup the application:
+
+`ansible-playbook -i production site.yml -K`
+
+### Deploy changes to the application:
+
+`ansible-playbook -i production site.yml -K --tags=deploy`
 
 ## Advanced Options
 
@@ -116,6 +140,7 @@ A cron job to automatically renew the certificate will run daily.  Note that if 
 - [Ansible - Getting Started](http://docs.ansible.com/intro_getting_started.html)
 - [Ansible - Best Practices](http://docs.ansible.com/playbooks_best_practices.html)
 - [How to deploy encrypted copies of your SSL keys and other files with Ansible and OpenSSL](http://www.calazan.com/how-to-deploy-encrypted-copies-of-your-ssl-keys-and-other-files-with-ansible-and-openssl/)
+- [Using SSH agent forwarding - GitHub developer guide](https://developer.github.com/guides/using-ssh-agent-forwarding/)
 
 ## Contributing
 
