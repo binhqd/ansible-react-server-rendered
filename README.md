@@ -145,3 +145,10 @@ A cron job to automatically renew the certificate will run daily.  Note that if 
 ## Contributing
 
 Contributions are welcome!
+
+## Thanks
+
+Thanks to the following repositories for code and inspiration:
+
+[Ansible Django Stack](https://github.com/jcalazan/ansible-django-stack)
+[Ansible-PM2](https://github.com/weareinteractive/ansible-pm2)
