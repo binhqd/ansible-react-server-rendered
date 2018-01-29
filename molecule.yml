@@ -5,7 +5,7 @@ driver:
 docker:
   containers:
 
-      - name: ansible-express-react-server-side-01
+      - name: ansible-react-server-rendered-01
         image: ubuntu
         image_version: xenial
         privileged: True
