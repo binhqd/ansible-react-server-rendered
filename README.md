@@ -18,7 +18,7 @@ A quick way to get started is using the test application at https://github.com/Y
 
 ### Configuring your application
 
-The main settings to change are in the [group_vars/vars.yml](group_vars/vars.yml) and [group_vars/vault.yml](group_vars/vault.yml) files, where you can configure the location of your Git project, the project name, and the application name which will be used throughout the Ansible configuration. Make sure to change the sudo user password (default for convenient testing is `password`).
+The main settings to change are in the [group_vars/production/vars.yml](group_vars/production/vars.yml) and [group_vars/production/vault.yml](group_vars/production/vault.yml) files, where you can configure the location of your Git project, the project name, and the application name which will be used throughout the Ansible configuration. Make sure to change the sudo user password (default for convenient testing is `password`).
 
 If your app needs additional system packages installed, you can add them in `roles/web/tasks/install_additional_packages.yml`.
 
