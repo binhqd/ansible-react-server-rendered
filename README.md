@@ -81,13 +81,13 @@ webservers
 1. Make sure ssh-agent is running on your local machine (run `ssh-agent` from the command line)
 1. Test that your ssh key is ready for forwarding via `ssh-add -L`; if not, add your key (`ssh-add yourkey`)
 1. Create an entry in your local .ssh/config file:
-```
-Host example.com
-    User example # Make sure to set this to your application user.
-    IdentityFile ~/.ssh/id_rsa
-    ForwardAgent Yes
-    IdentitiesOnly yes
-```
+    ```
+    Host example.com
+        User example # Make sure to set this to your application user.
+        IdentityFile ~/.ssh/id_rsa
+        ForwardAgent Yes
+        IdentitiesOnly yes
+    ```
 1. Make sure you're using the SSH connection to your repo (not the HTTPS connection)
 1. Ensure that your domain (e.g., `example.com`) points to your server's IP address
 1. Refer to the [Github tutorial](https://developer.github.com/guides/using-ssh-agent-forwarding/) for help debugging SSH agent forwarding
