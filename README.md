@@ -4,7 +4,7 @@ ansible-express-react-server-side
 
 Ansible Playbook designed for a server-rendered React app using Nginx, PM2, and Certbot via [Let's Encrypt](https://letsencrypt.org).
 
-**Tested with OS:** Ubuntu 16.04 LTS (64-bit PC)
+**Tested with OS:** Ubuntu 16.04 LTS (64-bit)
 
 **Tested with Cloud Providers:** [Digital Ocean](https://m.do.co/c/64a67961f6ed)
 
