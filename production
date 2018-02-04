@@ -1,5 +1,5 @@
 [webservers]
-example.com nginx_use_letsencrypt=true
+example.com use_ssh_agent_forwarding=false
 
 [production:children]
 webservers
