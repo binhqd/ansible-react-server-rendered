@@ -1,5 +1,7 @@
 #! bin/bash
 
+# append -K to this command if using a non-root sudo user
+# (i.e., if using with the security role)
 # append --ask-vault-pass to this command if 
-# using ansible-vault to encrypt ../group_vars/vault.yml
-ansible-playbook -i production site.yml -K # --ask-vault-pass
+# using ansible-vault to encrypt ../group_vars/vault.yml.
+ansible-playbook -i production site.yml -vvvv # -K # --ask-vault-pass
