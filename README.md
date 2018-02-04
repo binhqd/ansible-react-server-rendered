@@ -82,6 +82,16 @@ example.com nginx_use_letsencrypt=true
 webservers
 ```
 
+### Setup the application:
+
+`ansible-playbook -i production site.yml -K`
+
+### Deploy changes to the application:
+
+`ansible-playbook -i production site.yml -K --tags=deploy`
+
+## Advanced Options
+
 ### Setup SSH Agent forwarding
 
 1. Make sure ssh-agent is running on your local machine (run `ssh-agent` from the command line)
@@ -98,15 +108,6 @@ webservers
 1. Ensure that your domain (e.g., `example.com`) points to your server's IP address
 1. Refer to the [Github tutorial](https://developer.github.com/guides/using-ssh-agent-forwarding/) for help debugging SSH agent forwarding
 
-### Setup the application:
-
-`ansible-playbook -i production site.yml -K`
-
-### Deploy changes to the application:
-
-`ansible-playbook -i production site.yml -K --tags=deploy`
-
-## Advanced Options
 
 ### Creating a swap file
 
