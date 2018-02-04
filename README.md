@@ -8,6 +8,12 @@ Ansible Playbook designed for a server-rendered React app using Nginx, PM2, and 
 
 **Tested with Cloud Providers:** [Digital Ocean](https://m.do.co/c/64a67961f6ed)
 
+## Quickstart
+
+1. Replace `example.com` in the `production` playbook with your IP address or domain name. If using a domain, make sure your domain points to your server's IP address using an A record.
+1. Run `. bin/production/setup_production.sh`
+1. Visit your IP address to view the sample site.
+
 ## Getting Started
 
 A quick way to get started is using the test application at https://github.com/YPCrumble/server-rendered-react-app.
