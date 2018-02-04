@@ -4,6 +4,7 @@
   tags: packages
 
 - include: setup_known_hosts.yml
+  when: use_ssh_agent_forwarding is defined and use_ssh_agent_forwarding == True
 
 - include: create_users_and_groups.yml
 
