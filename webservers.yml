@@ -9,6 +9,6 @@
     update_apt_cache: yes
   roles:
     - base
-    - certbot
+    - { role: certbot, when: nginx_use_letsencrypt == True }
     - web
     - nginx
