@@ -18,4 +18,5 @@
   tags: deploy
 
 - include: save_application.yml
+  become: no
   tags: deploy
