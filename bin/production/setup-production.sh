@@ -1,4 +1,4 @@
-#! bin/bash
+#!/bin/bash
 
 # append -K to this command if using a non-root sudo user
 # (i.e., if using with the security role)
