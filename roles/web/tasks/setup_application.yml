@@ -23,4 +23,4 @@
   ignore_errors: yes
 
 - name: Start APP
-  command: pm2 start server.js --name app -i 0 chdir={{ project_path }}
+  command: pm2 start server.js --name {{ application_name }} -i 0 chdir={{ project_path }}
