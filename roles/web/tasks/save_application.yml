@@ -1,7 +1,7 @@
 ---
 
 # TODO: Remove these in favor of simpler `pm2 startup`.
-# PM2 startup tasks via 
+# PM2 startup tasks via
 # https://github.com/weareinteractive/ansible-pm2/blob/master/tasks/install.yml
 - name: Looking up user home
   shell: >
@@ -10,8 +10,8 @@
   register: pm2_user_home
 
 - name: Installing startup script
-  command: "pm2 startup systemd -u {{ pm2_user }} --hp {{ pm2_user_home.stdout }}"
+  shell: "sudo /usr/bin/pm2 startup systemd -u {{ pm2_user }} --hp {{ pm2_user_home.stdout }}"
   become: true
 
 - name: Save APP
-  command: pm2 save 
+  command: pm2 save
