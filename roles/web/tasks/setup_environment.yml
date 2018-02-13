@@ -1,4 +1,10 @@
 ---
+- name: Make sure application directory exist
+  file: path={{ environment_path }}
+        mode=0755
+        owner={{ pm2_user }}
+        group={{ pm2_group }}
+        state=directory
 
 - name: Create the application log folder
   file: path={{ application_log_dir }}
