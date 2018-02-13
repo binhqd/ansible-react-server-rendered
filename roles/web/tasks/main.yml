@@ -9,7 +9,9 @@
 - include: create_users_and_groups.yml
 
 - include: set_file_permissions.yml
-  tags: deploy
+  become: yes
+  tags:
+    - deploy
 
 - include: setup_environment.yml
 
